@@ -25,6 +25,7 @@ const textStyle = new PIXI.TextStyle({
 });
 
 let ladder:{[key:number]:PIXI.Sprite} = {}
+
 let background:PIXI.Sprite
 
 let game_over:boolean = false;
@@ -104,15 +105,13 @@ export default class GameScene extends Scene  {
   public up() {
     if(!game_over) {
       score++;
-      background.y+=2;
+      background.y+=8;
       background.y = (background.y>0)?-320:background.y
-
-      if(!game_over)this.player.texture = down?this.player_1:this.player_2
 
       for(let key in ladder) {
         if(ladder.hasOwnProperty(key)) {
-          ladder[key].y++;
-          ladder[key].y = (ladder[key].y>320)?-64:ladder[key].y
+          ladder[key].y+=4;
+          ladder[key].y = (ladder[key].y>320)?-62:ladder[key].y
         }
       }
     }  
@@ -131,6 +130,7 @@ export default class GameScene extends Scene  {
     this.game_over_sprite.alpha = (game_over)?1:0;
 
     if(!game_over)limitTime--;
+    if(!game_over)this.player.texture = down?this.player_1:this.player_2
 
     this.time.text = 'TIME:' + Math.floor(limitTime/100)
     this.score.text = 'SCORE:' + score
