@@ -6,6 +6,7 @@ let TextureManager = /** @class */ (() => {
             TextureManager.Sheet["bg"] = PIXI.BaseTexture.from(Resource.Static.sheet[0]);
             TextureManager.Sheet["player"] = PIXI.BaseTexture.from(Resource.Static.sheet[1]);
             TextureManager.Sheet["ladder"] = PIXI.BaseTexture.from(Resource.Static.sheet[2]);
+            TextureManager.Sheet["gameover"] = PIXI.BaseTexture.from(Resource.Static.sheet[3]);
             return true;
         }
     }

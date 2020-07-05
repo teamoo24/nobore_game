@@ -14,6 +14,7 @@ const Resource = Object.freeze({
             for_dripcoke + 'assets/image/sprite/bg.png',
             for_dripcoke + 'assets/image/sprite/player.png',
             for_dripcoke + 'assets/image/sprite/ladder.png',
+            for_dripcoke + 'assets/image/sprite/end.png',
         ]
     }
 });
