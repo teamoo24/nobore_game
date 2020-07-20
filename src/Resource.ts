@@ -17,6 +17,11 @@ const Resource = Object.freeze({
 			for_dripcoke+'assets/image/sprite/ladder.png',
 			for_dripcoke+'assets/image/sprite/end.png',
 		]
+	},
+	Sound: {
+		bgm: [
+			for_dripcoke+'assets/sound/bgm/game_main.mp3'
+		]
 	}
 })
 

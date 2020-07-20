@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js';
 
 import GameManager from 'Manager/GameManager'
 import TextureManager from 'Manager/TextureManager'
+import SoundManager from 'Manager/SoundManager'
 
 import GameScene from 'Scene/GameScene'
 import Fade from 'Transition/Fade'
@@ -32,6 +33,7 @@ export default class LogoScene extends Scene {
 	*/
 	public initall():boolean {
 		TextureManager.initSheet();
+		SoundManager.init_sound();
 		return true;
 	}
 

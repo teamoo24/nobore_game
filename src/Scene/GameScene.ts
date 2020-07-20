@@ -1,6 +1,7 @@
 import * as PIXI from 'pixi.js';
 import GameManager from 'Manager/GameManager';
 import TextureManager from 'Manager/TextureManager';
+import SoundManager from 'Manager/SoundManager'
 
 import Scene from 'Scene/Scene';
 import GameOverScene from 'Scene/GameOverScene';
@@ -13,7 +14,7 @@ const playerh:number = 64
 // スコアを格納するプロパティ設定
 let score = 0;
 // 制限時間を設定するプロパティ設定
-let limitTime = 300;
+let limitTime = 3000;
 // clickをチェックするプロパティ
 let down:boolean = false;
 // バックグラウンドのy値
@@ -95,6 +96,7 @@ export default class GameScene extends Scene  {
     this.game_over_sprite.position.set(this.renderer.width/2, this.renderer.height/2)
     this.game_over_sprite.alpha = 0;
 
+    SoundManager.bgm["game_main"].play()   
     this.addChilds()
   }
 
